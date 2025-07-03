@@ -503,7 +503,7 @@ footer {
 
 /*la partie mobile */
 /* Mobile first : adapté aux écrans jusqu'à 600px de large */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
     /* Afficher le bouton hamburger */
   .nav-toggle {
@@ -565,7 +565,7 @@ footer {
   /* Menu nav : vertical et plus espacé */
   .nav-links {
     flex-direction: column;
-    width: 100%;
+    width: 30%;
     gap: 10px;
   }
 
