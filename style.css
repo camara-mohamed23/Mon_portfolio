@@ -1,0 +1,694 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  width: 100%; /* pleine largeur */
+  background-color: #003366;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+ width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background-image:url("image/dev.jpg");
+  padding: 80px 0;
+  height: 600px;
+  text-align: center;
+
+}
+
+.header-container h2 {
+  margin-top: 50px;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.header-container p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 70px;
+}
+
+/* Profil avec photo dans navbar */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* Projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 15px 0 10px;
+  color: #003366;
+}
+
+.project-card p {
+  padding: 0 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Compétences */
+#skills {
+  background-color: #104579;
+  border-radius: 40px 50%;
+  background-size: cover;      /* L'image couvre toute la section */
+  background-position: center; /* Centrage de l'image */
+  background-repeat: no-repeat;
+  color: white;                /* Texte en blanc pour contraste, ajuste selon l'image */
+  padding: 60px 20px;
+}
+#skills h2{
+  color: #e9f0f8;
+}
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  margin-bottom: 12px;
+}
+
+.skills-list li strong{
+  color: #000000;
+}
+/* Contact */
+#contact a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #003366;
+  color: white;
+}
+/*resau sociaux*/
+.social-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-links a svg {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s;
+}
+
+.social-links a:hover svg {
+  fill: #00aced; /* Couleur Twitter par défaut, adapte si tu veux */
+}
+/*fin*/
+/*cv*/
+#cv-viewer {
+  max-width: 1300px;
+  margin: 0 auto 10px auto;
+}
+#cv-viewer p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #003366;
+    font-size: 30px;
+}
+/*formation*/
+#formation {
+  display: flex;
+  padding: 60px 20px;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+#formation h2 {
+  color: #003366;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.formation-item {
+  margin-bottom: 20px;
+}
+
+.formation-item h3 {
+  color: #00509e;
+  margin-bottom: 6px;
+}
+
+.competences-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.competences-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+#formation h3 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #003366;
+}
+/*stage*/
+#stages {
+  border-radius: 60px 50%;
+  align-content: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #e9f0f8;
+  color: #333;
+  text-align: center;  /* Tout le contenu sera centré */
+}
+#stages h2 {
+  color: #003366;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-align: center;  /* centre le titre */
+}
+
+.stage-item p,
+.stage-item ul {
+  text-align: center;  /* Tout le contenu sera centré */
+}
+
+
+
+.stage-item {
+  margin-bottom: 25px;
+  align-items: center;
+  text-align: center;  /* Tout le contenu sera centré */
+  justify-content: center;
+}
+
+.stage-item h3 {
+  color: #00509e;
+  margin-bottom: 10px;
+}
+
+.stage-item ul {
+  list-style-type: none;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #444;
+}
+
+.stage-item p {
+  margin-bottom: 10px;
+}
+
+
+/*conctact*/
+#contact {
+  background-color:#003366;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 0px 40%;
+  max-width: 100%;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#contact h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #f0f0f0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #f0f0f0;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  stroke: #00aced; /* Bleu Twitter ou choisis ta couleur */
+  flex-shrink: 0;
+  transition: stroke 0.3s;
+}
+
+.contact-item:hover .icon {
+  stroke: #ffd700; /* Couleur or au hover, pour un effet sympa */
+}
+/* Cacher le bouton hamburger sur desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  z-index: 110; /* au-dessus du nav */
+}
+
+/* Style des 3 barres du hamburger */
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+}
+
+.hamburger::before {
+  top: -8px;
+  left: 0;
+}
+
+.hamburger::after {
+  top: 8px;
+  left: 0;
+}
+
+/* Animation globale pour le header */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide {
+  animation: fadeSlide 1.2s ease-out both;
+}
+
+/* Animation spécifique pour chaque élément */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Galerie de projets */
+#galerie {
+  padding: 60px 20px;
+  background-color: #f0f4f8;
+}
+
+#galerie h2 {
+  color: #003366;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.gallery-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.gallery-scroll img {
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-scroll img:hover {
+  transform: scale(1.05);
+}
+
+#interets {
+  padding: 60px 20px;
+  background-color: #f4f7fa;
+  text-align: center;
+}
+
+#interets h2 {
+  color: #003366;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+.interets-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.interet-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.interet-card:hover {
+  transform: translateY(-5px);
+}
+
+.interet-card img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.interet-card h3 {
+  color: #00509e;
+  margin-bottom: 10px;
+}
+
+.interet-card p {
+  color: #444;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+/*la partie mobile */
+/* Mobile first : adapté aux écrans jusqu'à 600px de large */
+@media (max-width: 800px) {
+
+    /* Afficher le bouton hamburger */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Cacher le menu par défaut */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #003366;
+    position: absolute;
+    top: 65px; /* hauteur nav */
+    left: 0;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 100;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  /* Liens du menu mobiles */
+  .nav-links li {
+    padding: 12px 20px;
+  }
+
+  .nav-links li + li {
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* Ajuster nav-container */
+  .nav-container {
+    position: relative; /* pour positionnement absolu du menu */
+    flex-wrap: nowrap;
+  }
+
+
+  /* Navigation : menu en colonne, plus compact */
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .profile-info {
+    gap: 8px;
+  }
+
+  .profile-pic {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Menu nav : vertical et plus espacé */
+  .nav-links {
+    flex-direction: column;
+    width: 30%;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  /* Liens réseaux sociaux : plus petits et espacés */
+  .social-links {
+    gap: 12px;
+  }
+
+  .social-links a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Header : hauteur réduite, texte centré avec taille plus petite */
+  header {
+    height: 350px;
+    padding: 40px 10px;
+    background-position: center center;
+  }
+
+  .header-container h2 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  .header-container p {
+    font-size: 14px;
+    margin-top: 40px;
+  }
+
+  /* Sections : padding réduit */
+  section {
+    padding: 40px 15px;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  /* Formation : mise en colonne, plus lisible */
+  #formation {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+
+  .formation-item {
+    margin-bottom: 25px;
+  }
+
+  /* Projets : 1 colonne */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  /* Compétences : padding et taille des textes ajustés */
+  #skills {
+    padding: 40px 15px;
+    border-radius: 30px 40%;
+  }
+
+  .skills-list li {
+    font-size: 14px;
+  }
+
+  /* Stages : padding et texte centré avec marges réduites */
+  #stages {
+    padding: 40px 15px;
+    border-radius: 40px 40%;
+  }
+
+  .stage-item p,
+  .stage-item ul {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /* Contact : padding réduit, texte plus petit */
+  #contact {
+    padding: 40px 15px;
+    border-radius: 0 30%;
+  }
+
+  #contact h2 {
+    font-size: 24px;
+  }
+
+  .contact-item {
+    font-size: 16px;
+    gap: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-item svg.icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+  }
+
+  /* CV Viewer : taille adaptée */
+  #cv-viewer embed {
+    width: 100%;
+    height: 600px;
+  }
+
+  /* Footer : padding réduit */
+  footer {
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+}
