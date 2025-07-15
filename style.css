@@ -20,11 +20,13 @@ nav {
   padding: 15px 0;
   position: sticky;
   top: 0;
+  height: 100px;
   z-index: 100;
 }
 
 .nav-container {
  width: 100%;
+ padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,30 +139,64 @@ section h2 {
 }
 
 /* Compétences */
-#skills {
-  background-color: #104579;
-  border-radius: 40px 50%;
-  background-size: cover;      /* L'image couvre toute la section */
-  background-position: center; /* Centrage de l'image */
-  background-repeat: no-repeat;
-  color: white;                /* Texte en blanc pour contraste, ajuste selon l'image */
+/* ---- SECTION ---- */
+.skills-section {
+  background: #f5f9ff;               /* léger fond bleu pâle */
   padding: 60px 20px;
-}
-#skills h2{
-  color: #e9f0f8;
-}
-.skills-list {
-  list-style: none;
-  padding-left: 0;
+  text-align: center;
 }
 
-.skills-list li {
+.skills-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #104579;
+}
+
+/* ---- GRILLE ---- */
+.skills-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---- CARTES ---- */
+.skill-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 28px 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-card img{
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+}
+
+.icon-skill {
+  width: 45px;
+  height: 45px;
+
+}
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.skill-card h3 {
+  font-size: 1.25rem;
   margin-bottom: 12px;
+  color: #104579;
 }
 
-.skills-list li strong{
-  color: #000000;
+.skill-card p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #333;
 }
+
 /* Contact */
 #contact a {
   color: #0066cc;
@@ -198,14 +234,21 @@ footer {
 /*fin*/
 /*cv*/
 #cv-viewer {
-  max-width: 1300px;
+  padding: 0%;
+  background-color: #ffffff;
+  margin: 0%;
+  max-width: 1200px;
   margin: 0 auto 10px auto;
+  text-decoration-line: none;
+}
+#cv-viewer embed{
+  background-color: #ffffff;
 }
 #cv-viewer p a {
     text-decoration: none;
     font-weight: bold;
     color: #003366;
-    font-size: 30px;
+    font-size: 25px;
 }
 /*formation*/
 #formation {
@@ -249,8 +292,7 @@ footer {
 }
 /*stage*/
 #stages {
-  border-radius: 60px 50%;
-  align-content: center;
+  /*align-content: center;*/
   justify-content: center;
   padding: 60px 20px;
   background-color: #e9f0f8;
@@ -264,9 +306,20 @@ footer {
   text-align: center;  /* centre le titre */
 }
 
+#stages .container {
+width: 900px;
+background-color: #ffffff;
+padding: 40px;
+margin-bottom: 40px;
+  
+}
+
+
+
 .stage-item p,
 .stage-item ul {
-  text-align: center;  /* Tout le contenu sera centré */
+  text-align: left;  /* Tout le contenu sera centré */
+  padding: 10px;
 }
 
 
@@ -301,7 +354,7 @@ footer {
   color: white;
   padding: 60px 20px;
   text-align: center;
-  border-radius: 0px 40%;
+  
   max-width: 100%;
   margin: 40px auto;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -508,6 +561,7 @@ footer {
     /* Afficher le bouton hamburger */
   .nav-toggle {
     display: flex;
+    left: 200px;
   }
 
   /* Cacher le menu par défaut */
@@ -517,8 +571,8 @@ footer {
     width: 100%;
     background-color: #003366;
     position: absolute;
-    top: 65px; /* hauteur nav */
-    left: 0;
+    top: 35px; /* hauteur nav */
+    right: 0px;
     padding: 10px 0;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -565,7 +619,7 @@ footer {
   /* Menu nav : vertical et plus espacé */
   .nav-links {
     flex-direction: column;
-    width: 30%;
+    width: 35%;
     gap: 10px;
   }
 
@@ -578,6 +632,8 @@ footer {
     padding: 8px 12px;
     font-size: 16px;
   }
+  
+
 
   /* Liens réseaux sociaux : plus petits et espacés */
   .social-links {
@@ -648,8 +704,17 @@ footer {
   /* Stages : padding et texte centré avec marges réduites */
   #stages {
     padding: 40px 15px;
-    border-radius: 40px 40%;
+   
   }
+
+
+  #stages .container {
+width: 500px;
+background-color: #ffffff;
+padding: 40px;
+margin-bottom: 40px;
+  
+}
 
   .stage-item p,
   .stage-item ul {
@@ -660,7 +725,7 @@ footer {
   /* Contact : padding réduit, texte plus petit */
   #contact {
     padding: 40px 15px;
-    border-radius: 0 30%;
+    
   }
 
   #contact h2 {
@@ -683,7 +748,7 @@ footer {
   /* CV Viewer : taille adaptée */
   #cv-viewer embed {
     width: 100%;
-    height: 600px;
+    height: 800px;
   }
 
   /* Footer : padding réduit */
