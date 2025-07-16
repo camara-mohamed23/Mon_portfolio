@@ -434,13 +434,23 @@ Avec une solide expérience en développement full-stack, j’ai soif de défis 
   </footer>
 <script>
   const toggleButton = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navLinks     = document.querySelector('.nav-links');
+  const links        = document.querySelectorAll('.nav-links a'); // tous les liens du menu
 
+  // Ouvre / ferme quand on appuie sur le burger
   toggleButton.addEventListener('click', () => {
     navLinks.classList.toggle('show');
-    // Animation du bouton hamburger en croix (optionnel)
     toggleButton.classList.toggle('active');
   });
+
+  // Ferme dès qu’on clique sur un lien du menu
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');   // cache le menu
+      toggleButton.classList.remove('active'); // remet l’icône burger
+    });
+  });
 </script>
+
 </body>
 </html>

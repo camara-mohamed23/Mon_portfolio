@@ -561,7 +561,7 @@ margin-bottom: 40px;
     /* Afficher le bouton hamburger */
   .nav-toggle {
     display: flex; 
-      left: 30%;
+    left: 26%;
     position:relative;
   }
 
