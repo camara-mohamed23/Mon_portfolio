@@ -561,7 +561,8 @@ margin-bottom: 40px;
     /* Afficher le bouton hamburger */
   .nav-toggle {
     display: flex;
-    left: 200px;
+    left: 150px;
+    position: relative;
   }
 
   /* Cacher le menu par défaut */
@@ -709,10 +710,10 @@ margin-bottom: 40px;
 
 
   #stages .container {
-width: 500px;
+width: 400px;
 background-color: #ffffff;
-padding: 40px;
-margin-bottom: 40px;
+padding: 20px;
+margin-bottom: 20px;
   
 }
 
