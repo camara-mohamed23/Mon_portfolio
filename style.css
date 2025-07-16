@@ -572,7 +572,7 @@ margin-bottom: 40px;
     width: 100%;
     background-color: #003366;
     position: absolute;
-    top: 35px; /* hauteur nav */
+    top: 30px; /* hauteur nav */
     right: 0px;
     padding: 10px 0;
     border-radius: 0 0 8px 8px;
@@ -761,7 +761,7 @@ margin-bottom: 20px;
 
 
 /* tablette */
-@media (min-width: 601px) and (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 890px) {
 
     /* Afficher le bouton hamburger */
   .nav-toggle {
