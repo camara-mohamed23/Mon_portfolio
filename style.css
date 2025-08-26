@@ -135,7 +135,7 @@ section h2 {
 .project-card p {
   padding: 0 10px;
   font-size: 14px;
-  color: #555;
+  color: #000000;
 }
 
 /* Compétences */
@@ -554,28 +554,123 @@ margin-bottom: 40px;
 
 
 
-/*la partie mobile */
-/* Mobile first : adapté aux écrans jusqu'à 600px de large */
-@media (min-width: 201px) and (max-width: 600px) {
 
-    /* Afficher le bouton hamburger */
-  .nav-toggle {
-    display: flex; 
-    left: 20%;
-    position:relative;
+
+@media (max-width: 620px) {
+ .nav-toggle {
+    display: flex;
+    position: absolute;     /* on “arrime” le bouton */
+    right: 8px;             /* collé à gauche */
+    top: 50%;               /* centré verticalement dans la barre */
+    transform: translateY(-50%);
+    margin: 0 !important;   /* neutralise tout margin auto */
+    order: -1;              /* au cas où le flex l’envoie à droite */
+    z-index: 101;           /* au-dessus du menu déroulant */
+  }
+    .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* plus de space-between en mobile */
+    padding-left: 48px;           /* espace pour ne pas chevaucher .nav-toggle */
   }
 
-  /* Cacher le menu par défaut */
   .nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
     background-color: #003366;
+    width: 300px;
+    height: 900px;
+    margin: 30px;
     position: absolute;
-    top: 30px; /* hauteur nav */
-    right: 0px;
-    padding: 10px 0;
-    border-radius: 0 0 8px 8px;
+    top: 80px;
+    right: 0;
+    padding: 20px;
+    border-radius: 0 0 13px 13px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 100;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  header {
+    height: 300px;
+    padding: 20px 10px;
+  }
+
+  .header-container h2 {
+    font-size: 20px;
+  }
+
+  .header-container p {
+    font-size: 13px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  /*stage*/
+  #stages {
+    /*align-content: center;*/
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #e9f0f8;
+    color: #333;
+    text-align: center;  /* Tout le contenu sera centré */
+  }
+  #stages h2 {
+    color: #003366;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-align: center;  /* centre le titre */
+  }
+
+  #stages .container {
+  width: 400px;
+  background-color: #ffffff;
+  padding: 40px;
+  margin-bottom: 40px;
+    
+  }
+  
+
+}
+
+
+@media (min-width: 601px) and (max-width: 1300px) {
+ .nav-toggle {
+    display: flex;
+    position: absolute;     /* on “arrime” le bouton */
+    right: 8px;              /* collé à gauche */
+    top: 50%;               /* centré verticalement dans la barre */
+    transform: translateY(-50%);
+    margin: 0 !important;   /* neutralise tout margin auto */
+    order: -1;              /* au cas où le flex l’envoie à droite */
+    z-index: 101;           /* au-dessus du menu déroulant */
+  }
+    .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* plus de space-between en mobile */
+    padding-left: 48px;           /* espace pour ne pas chevaucher .nav-toggle */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    width: 300px;
+    margin: 30px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    padding: 20px;
+    border-radius: 0 0 13px 13px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 100;
   }
@@ -584,389 +679,21 @@ margin-bottom: 40px;
     display: flex;
   }
 
-  /* Liens du menu mobiles */
-  .nav-links li {
-    padding: 12px 20px;
-  }
-
-  .nav-links li + li {
-    border-top: 1px solid rgba(255,255,255,0.2);
-  }
-
-  /* Ajuster nav-container */
-  .nav-container {
-    position: relative; /* pour positionnement absolu du menu */
-    flex-wrap: nowrap;
-  }
-
-
-  /* Navigation : menu en colonne, plus compact */
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 0 15px;
-  }
-
-  .profile-info {
-    gap: 8px;
-  }
-
-  .profile-pic {
-    width: 50px;
-    height: 50px;
-  }
-
-  /* Menu nav : vertical et plus espacé */
-  .nav-links {
-    flex-direction: column;
-    width: 45%;
-    gap: 10px;
-  }
-
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 8px 12px;
-    font-size: 16px;
-  }
-  
-
-
-  /* Liens réseaux sociaux : plus petits et espacés */
-  .social-links {
-    gap: 12px;
-  }
-
-  .social-links a svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  /* Header : hauteur réduite, texte centré avec taille plus petite */
   header {
     height: 350px;
-    padding: 40px 10px;
-    background-position: center center;
+    padding: 40px 20px;
   }
 
   .header-container h2 {
     font-size: 24px;
-    margin-top: 30px;
   }
 
   .header-container p {
-    font-size: 14px;
-    margin-top: 40px;
+    font-size: 15px;
   }
 
-  /* Sections : padding réduit */
-  section {
-    padding: 40px 15px;
-  }
-
-  section h2 {
-    font-size: 24px;
-  }
-
-  /* Formation : mise en colonne, plus lisible */
-  #formation {
-    flex-direction: column;
-    padding: 40px 15px;
-  }
-
-  .formation-item {
-    margin-bottom: 25px;
-  }
-
-  /* Projets : 1 colonne */
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-  }
-
-  .project-card img {
-    height: 150px;
-  }
-
-  /* Compétences : padding et taille des textes ajustés */
-  #skills {
-    padding: 40px 15px;
-    border-radius: 30px 40%;
-  }
-
-  .skills-list li {
-    font-size: 14px;
-  }
-
-  /* Stages : padding et texte centré avec marges réduites */
-  #stages {
-    padding: 40px 15px;
-   
-  }
-
-
-  #stages .container {
-width: 300px;
-background-color: #ffffff;
-padding: 20px;
-margin-bottom: 20px;
-  
-}
-
-  .stage-item p,
-  .stage-item ul {
-    text-align: center;
-    font-size: 14px;
-  }
-
-  /* Contact : padding réduit, texte plus petit */
-  #contact {
-    padding: 40px 15px;
-    
-  }
-
-  #contact h2 {
-    font-size: 24px;
-  }
-
-  .contact-item {
-    font-size: 16px;
-    gap: 10px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-item svg.icon {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 5px;
-  }
-
-  /* CV Viewer : taille adaptée */
-  #cv-viewer embed {
-    width: 100%;
-    height: 800px;
-  }
-
-  /* Footer : padding réduit */
-  footer {
-    padding: 15px 10px;
-    font-size: 14px;
-  }
-}
-
-
-/* tablette */
-@media (min-width: 601px) and (max-width: 890px) {
-
-    /* Afficher le bouton hamburger */
-  .nav-toggle {
-    display: flex;
-    left: 90%;
-    position:relative;
-  }
-
-  /* Cacher le menu par défaut */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #003366;
-    position: absolute;
-    top: 35px; /* hauteur nav */
-    right: 0px;
-    padding: 10px 0;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    z-index: 100;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  /* Liens du menu mobiles */
-  .nav-links li {
-    padding: 12px 20px;
-  }
-
-  .nav-links li + li {
-    border-top: 1px solid rgba(255,255,255,0.2);
-  }
-
-  /* Ajuster nav-container */
-  .nav-container {
-    position: relative; /* pour positionnement absolu du menu */
-    flex-wrap: nowrap;
-  }
-
-
-  /* Navigation : menu en colonne, plus compact */
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 0 15px;
-  }
-
-  .profile-info {
-    gap: 8px;
-  }
-
-  .profile-pic {
-    width: 35px;
-    height: 35px;
-  }
-
-  /* Menu nav : vertical et plus espacé */
-  .nav-links {
-    flex-direction: column;
-    width: 35%;
-    gap: 10px;
-  }
-
-  .nav-links li {
-    width: 100%;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 8px 12px;
-    font-size: 16px;
-  }
-  
-
-
-  /* Liens réseaux sociaux : plus petits et espacés */
-  .social-links {
-    gap: 12px;
-  }
-
-  .social-links a svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  /* Header : hauteur réduite, texte centré avec taille plus petite */
-  header {
-    height: 350px;
-    padding: 40px 10px;
-    background-position: center center;
-  }
-
-  .header-container h2 {
-    font-size: 24px;
-    margin-top: 30px;
-  }
-
-  .header-container p {
-    font-size: 14px;
-    margin-top: 40px;
-  }
-
-  /* Sections : padding réduit */
-  section {
-    padding: 40px 15px;
-  }
-
-  section h2 {
-    font-size: 24px;
-  }
-
-  /* Formation : mise en colonne, plus lisible */
-  #formation {
-    flex-direction: column;
-    padding: 40px 15px;
-  }
-
-  .formation-item {
-    margin-bottom: 25px;
-  }
-
-  /* Projets : 1 colonne */
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .project-card img {
-    height: 150px;
-  }
-
-  /* Compétences : padding et taille des textes ajustés */
-  #skills {
-    padding: 40px 15px;
-    border-radius: 30px 40%;
-  }
-
-  .skills-list li {
-    font-size: 14px;
-  }
-
-  /* Stages : padding et texte centré avec marges réduites */
-  #stages {
-    padding: 40px 15px;
-   
-  }
-
-
-  #stages .container {
-width: 650px;
-background-color: #ffffff;
-padding: 20px;
-margin-bottom: 20px;
-  
-}
-
-  .stage-item p,
-  .stage-item ul {
-    text-align: center;
-    font-size: 14px;
-  }
-
-  /* Contact : padding réduit, texte plus petit */
-  #contact {
-    padding: 40px 15px;
-    
-  }
-
-  #contact h2 {
-    font-size: 24px;
-  }
-
-  .contact-item {
-    font-size: 16px;
-    gap: 10px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-item svg.icon {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 5px;
-  }
-
-  /* CV Viewer : taille adaptée */
-  #cv-viewer embed {
-    width: 100%;
-    height: 800px;
-  }
-
-  /* Footer : padding réduit */
-  footer {
-    padding: 15px 10px;
-    font-size: 14px;
-  }
-  .c{
-    color: #ffffff;
-    text-align: center;
-    font-size: 35px;
-    font-style: normal;
-    font-family: 'Times New Roman', Times, serif;
   }
 }
