@@ -640,7 +640,7 @@ margin-bottom: 40px;
   background-color: #ffffff;
   padding: 40px;
   margin-bottom: 40px;
-   border-radius: 0 20px 0 20px;
+  border-radius: 0 20px 0 20px;
     
   }
   .profile-pic {
@@ -718,11 +718,12 @@ margin-bottom: 40px;
     gap: 20px;
   }
 
-   #stages .container {
+   #stages .container{
   width: 600px;
   background-color: #ffffff;
   padding: 40px;
   margin-bottom: 40px;
+  border-radius: 0 20px 0 20px;
     
   }
 
