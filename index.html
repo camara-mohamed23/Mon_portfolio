@@ -124,27 +124,39 @@
 
         <div class="stage-item">
               <h3>Stage de fin d’études – Projet de fin d’études | Mattel (2024)</h3>
-              <p><strong>Développeur Full Stack – Développement d'un logiciel de gestion de transactions de solde</strong></p>
-              <p>Mattel, premier opérateur mobile en Mauritanie depuis 2000, est le fruit d’une coopération mauritano-tunisienne. L’entreprise mise sur la qualité de son réseau, le professionnalisme de son personnel et la proximité avec ses clients.</p>
+              <p><strong>Développement d’un logiciel desktop sécurisé – Service de transfert de solde </strong></p>
+              <p>Mattel, premier opérateur mobile en Mauritanie depuis 2000, est le fruit d’une coopération mauritano-tunisienne. 
+                L’entreprise mise sur la qualité de son réseau, le professionnalisme de son personnel et la proximité avec ses clients.</p>
 
-        <p>Sa Direction des Systèmes d’Information (DSI) joue un rôle stratégique en alignant les technologies de l'information sur les objectifs de l’entreprise, tout en favorisant l’innovation et la performance. Le logiciel développé, nommé <strong>Mischili</strong>, permet aux revendeurs d’envoyer du crédit, de la connexion ou des SMS aux clients Mattel, ou via des applications bancaires comme Bankily et Masirvi. Toutes les transactions sont automatisées et les données sont centralisées dans une balance regroupant les comptes des revendeurs et des clients.</p>
+              <p>L’objectif du projet était de centraliser les données dans un système fiable, de faciliter la prise de décision et
+                 d’améliorer la transparence et l'efficacité du service client.</p>
 
-        <p>L’objectif du projet était de centraliser les données dans un système fiable, de faciliter la prise de décision et d’améliorer la transparence et l'efficacité du service client.</p>
+                
+              
+              <ul>
+                <li><strong>Modules fonctionnels :</strong>
+                  <ul>
+                    <li>Gestion des revendeurs.</li>
+                    <li>Suivi des transactions clients et bancaires (Bankily, Masirvi).</li>
+                    <li>Statistiques de données : analyse des transactions par statut, type, montant et période.</li>
+                    <li>Génération automatisée de rapports annuels.</li>
+                  </ul>
+                </li>
+                <li><strong>Tableaux de bord & reporting :</strong>
+                  <ul>
+                    <li>Conception de graphiques dynamiques (transactions réussies/échouées).</li>
+                    <li>Montants par banque.</li>
+                    <li>Soldes par groupe.</li>
+                    <li>Chiffre d’affaires annuel/mensuel.</li>
+                  </ul>
+                </li>
+                <li><strong>Sécurité renforcée :</strong> Authentification par email/mot de passe et contrôle d’accès par modules pour garantir la confidentialité et la fiabilité des données.</li>
+                <li><strong>Technologies utilisées :</strong> Java (JDBC, Swing/JavaFX), MySQL, NetBeans, phpMyAdmin, UML/Merise (modèle en cascade).</li>
+              </ul>
+              </li>
+              </ul>
 
-        <ul>
-          <li>Développement de microservices avec Spring Boot pour la gestion de transactions de soldes à grande échelle</li>
-          <li>Sécurisation des accès via Spring Security avec OAuth2 et JWT</li>
-          <li>Mise en place de traitements bancaires automatisés avec Spring Batch</li>
-          <li>Déploiement CI/CD avec Jenkins et Docker</li>
-          <li>Création d’interfaces utilisateurs dynamiques avec Angular Javafx</li>
-          <li>Intégration avec les bases de données MySQL et gestion des flux de transaction</li>
-          <li>Intégration des services bancaires (Bankily, Masirvi) et création de tableaux de bord analytiques</li>
-          <li>Optimisation des performances via amélioration des requêtes SQL</li>
-          <li>Réalisation de tests unitaires, d’intégration et de performance, et correction des bugs</li>
-          <li>Rédaction du rapport de projet</li>
-        </ul>
 
-        <p><strong>Stack utilisée :</strong> Java, Javafx, Spring Boot, Angular, MySQL, Spring Security, Spring Batch, Docker, Jenkins</p>
 
 </div>
 </div>
@@ -152,16 +164,57 @@
 
     <div class="stage-item">
       <h3>Stage de 2e année licence | Syskat (2023)</h3>
-      <p><strong>Développement web et solutions de gestion pour les clients de l’entreprise</strong></p>
+      <p><strong>Développement et parametrage de gestion de restaurantion via odoo </strong></p>
       <p>Syskat est une entreprise spécialisée dans la transformation digitale, fournissant des services de développement web, d'intégration d’ERP et de conseil aux PME. Durant ce stage, j’ai contribué activement à la création de solutions web modernes et à la configuration d’applications métiers pour les clients.</p>
-      <ul>
-        <li>Développement de sites web dynamiques avec PHP, Laravel, JavaScript et ReactJS</li>
-        <li>Optimisation de l'affichage responsive pour une meilleure expérience utilisateur sur mobile</li>
-        <li>Réalisation des phases de tests fonctionnels et validation client</li>
-        <li>Développement d’une solution complète de gestion pour un restaurant sur la plateforme Odoo</li>
-        <li>Configuration des modules Odoo : gestion des commandes, des tables, des stocks, des clients, des fournisseurs et de la facturation</li>
-      </ul>
-      <p><strong>Technologies utilisées :</strong> PHP, Laravel, JavaScript, ReactJS, Odoo</p>
+            <ul>
+            <li><strong>Point de Vente (PoS) – Restaurant</strong>
+              <ul>
+                <li>Gestion des commandes à table (mode restaurant).</li>
+                <li>Interface tactile (tablette, écran tactile).</li>
+                <li>Plan de salle avec tables, zones, et serveurs assignés.</li>
+                <li>Gestion multi-session (plusieurs caisses en parallèle).</li>
+                <li>Impression des tickets de cuisine (par produit / catégorie).</li>
+                <li>Division ou regroupement de notes (split bill).</li>
+              </ul>
+            </li>
+
+            <li><strong>Gestion de stock (Inventory)</strong>
+              <ul>
+                <li>Suivi en temps réel des ingrédients.</li>
+                <li>Décrémentation automatique des stocks lors des ventes.</li>
+                <li>Alertes sur ruptures de stock.</li>
+    
+              </ul>
+            </li>
+
+            <li><strong>Facturation & Comptabilité (Invoicing/Accounting)</strong>
+              <ul>
+                <li>Factures automatiques depuis les commandes PoS.</li>
+                <li>Gestion des paiements (espèces, carte, chèques, mobile money).</li>
+                <li>Suivi des ventes et marges.</li>
+                <li>Rapports financiers (CA, TVA, bénéfices).</li>
+              </ul>
+            </li>
+
+            <li><strong>Achats (Purchase)</strong>
+              <ul>
+                <li>Commandes fournisseurs (ingrédients, boissons, consommables).</li>
+                <li>Suivi des prix et fournisseurs.</li>
+                <li>Réapprovisionnement automatique en fonction du stock.</li>
+              </ul>
+            </li>
+
+            <li><strong>Site Web / E-commerce</strong>
+              <ul>
+                <li>Commandes en ligne (click & collect).</li>
+                <li>Livraison à domicile avec suivi.</li>
+                <li>Intégration avec le module PoS.</li>
+              </ul>
+            </li>
+
+            
+          </ul>
+
     </div>
   
   </div>
