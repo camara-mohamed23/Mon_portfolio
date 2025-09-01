@@ -39,13 +39,14 @@
       <nav id="navmenu" class="navmenu">
         <ul>
          <ul>
-         <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i>Accueil</a></li>
+          <li><a href="index.html" class="active"><i class="bi bi-house navicon"></i>Accueil</a></li>
           <li><a href="index.html"><i class="bi bi-person navicon"></i> propos de moi</a></li>
           <li><a href="index.html"><i class="bi bi-file-earmark-text navicon"></i> Resumé</a></li>
           <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Mes projets</a></li>
           <li><a href="index.html"><i class="bi bi-hdd-stack navicon"></i> Compétences</a></li>
           <li class="index.html"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Centre d'interet</span></a></li>
           <li><a href="index.html"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+          
         
         </ul>
       </nav>
@@ -66,7 +67,7 @@
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Détail de projet réseau social </h1>
+        <h1 class="mb-2 mb-lg-0">Détail projet système de gestion de restaurant </h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Accueil </a></li>
@@ -89,9 +90,10 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/person/reseau.jpeg" alt="Portfolio Image" class="img-fluid" loading="lazy">
+                  <img src="assets/img/person/odoo.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
                 </div>
 
+                
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -100,34 +102,72 @@
           <div class="col-lg-12">
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Travail effectué</h2>
-           
-              <div class="resume-item">
-                <h4> </h4>
-                
-                <ul>
-                        <li><strong>Projet :</strong> Conçu et implémenté un réseau social complet</li>
+              <ul>
+                  <li><strong>Projet :</strong> Gestion de restaurant sur Odoo</li>
 
-                        <li><strong>Fonctionnalités principales :</strong>
-                          <ul>
-                            <li>Authentification sécurisée</li>
-                            <li>Gestion des profils utilisateurs</li>
-                            <li>Fil de posts avec texte et images</li>
-                            <li>Likes et commentaires</li>
-                            <li>Messagerie privée</li>
-                          </ul>
-                        </li>
+                  <li><strong>Point de Vente (PoS) – Restaurant :</strong>
+                    <ul>
+                      <li>Gestion des commandes à table (mode restaurant)</li>
+                      <li>Interface tactile (tablette, écran tactile)</li>
+                      <li>Plan de salle avec tables, zones, et serveurs assignés</li>
+                      <li>Gestion multi-session (plusieurs caisses en parallèle)</li>
+                      <li>Impression des tickets de cuisine (par produit / catégorie)</li>
+                      <li>Division ou regroupement de notes (split bill)</li>
+                    </ul>
+                  </li>
 
-                        <li><strong>Sécurisation :</strong>
-                          <ul>
-                            <li>password_hash</li>
-                            <li>Tokens CSRF</li>
-                            <li>Requêtes PDO préparées</li>
-                            <li>Filtrage des uploads</li>
-                            <li>UI en HTML/CSS</li>
-                          </ul>
-                        </li>
+                  <li><strong>Gestion de stock (Inventory) :</strong>
+                    <ul>
+                      <li>Suivi en temps réel des ingrédients</li>
+                      <li>Décrémentation automatique des stocks lors des ventes</li>
+                      <li>Alertes sur ruptures de stock</li>
+                      <li>Gestion des lots et DLC (Date Limite de Consommation)</li>
+                    </ul>
+                  </li>
 
+                  <li><strong>Facturation & Comptabilité (Invoicing/Accounting) :</strong>
+                    <ul>
+                      <li>Factures automatiques depuis les commandes PoS</li>
+                      <li>Gestion des paiements (espèces, carte, chèques, mobile money)</li>
+                      <li>Suivi des ventes et marges</li>
+                      <li>Rapports financiers (CA, TVA, bénéfices)</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>Ressources Humaines (HR) :</strong>
+                    <ul>
+                      <li>Gestion des horaires du personnel</li>
+                      <li>Feuilles de temps pour les employés</li>
+                      <li>Paie et contrats</li>
+                      <li>Suivi des performances des serveurs</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>Achats (Purchase) :</strong>
+                    <ul>
+                      <li>Commandes fournisseurs (ingrédients, boissons, consommables)</li>
+                      <li>Suivi des prix et fournisseurs</li>
+                      <li>Réapprovisionnement automatique en fonction du stock</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>Site Web / E-commerce :</strong>
+                    <ul>
+                      <li>Commandes en ligne (click & collect)</li>
+                      <li>Livraison à domicile avec suivi</li>
+                      <li>Intégration avec le module PoS</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>Reporting & Tableau de bord :</strong>
+                    <ul>
+                      <li>Suivi du chiffre d’affaires par serveur, produit ou période</li>
+                      <li>Statistiques sur les plats les plus vendus</li>
+                      <li>Analyse des coûts et marges</li>
+                    </ul>
+                  </li>
                 </ul>
+
               </div>
         
 
@@ -137,7 +177,7 @@
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
                       <i class="bi bi-check-circle-fill"></i>
                       <h4>Impact du projet</h4>
-                      <li><strong>Impact :</strong> Amélioration de la sécurité et de l’expérience utilisateur, création d’une plateforme interactive favorisant les échanges et la communication en ligne.</li>
+                      <p>Réduction de 35% du temps de gestion des commandes restaurant avec Odoo.</p>
                     </div>
                   </div>
 
@@ -147,11 +187,10 @@
                     <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
                       <i class="bi bi-shield-check"></i>
                       <h4>Technologies utilisées</h4>
-                      <li><strong>Stack utilisée :</strong> PHP 8, MySQL, Apache (XAMPP), phpMyAdmin</li>
+                      <p>ERP ODOO</p>
                     </div>
                   </div>
-                  
-                  
+                 
                 </div>
               </div>
             </div>
