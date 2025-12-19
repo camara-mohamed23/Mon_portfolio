@@ -29,16 +29,16 @@ if (form) {
       loading.style.display = 'none';
 
       if (res.ok) {
-        // ✅ Affiche le message de succès
+        //  Affiche le message de succès
         sentBox.style.display = 'block';
         form.reset();
 
-        // 👉 Ramène automatiquement l’utilisateur vers le formulaire
+        //  Ramène automatiquement l’utilisateur vers le formulaire
         form.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
 
-      // ❌ Erreur
+      //  Erreur
       const data = await res.json().catch(() => ({}));
       errorBox.textContent = data.errors?.map(e => e.message).join(', ') || 'Une erreur est survenue.';
       errorBox.style.display = 'block';
